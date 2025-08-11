@@ -345,15 +345,15 @@ if __name__ == "__main__":
 
     argparser.add_argument("--path_for_training_data", type=str, default="my_path/pdb_2021aug02", help="path for loading training data") 
 
-    argparser.add_argument("--chain_id_train_jsonl",type=str, default='/home/light/xw/ProteinMPNN_222/training/data/Cyclic peptide/train/assigned_pdbs.jsonl', help="Path to a dictionary specifying which chains need to be designed and which ones are fixed, if not specied all chains will be designed.")
-    argparser.add_argument("--chain_id_val_jsonl",type=str, default='/home/light/xw/ProteinMPNN_222/training/data/Cyclic peptide/val/assigned_pdbs.jsonl', help="Path to a dictionary specifying which chains need to be designed and which ones are fixed, if not specied all chains will be designed.")
+    argparser.add_argument("--chain_id_train_jsonl",type=str, default='./data/Cyclic peptide/train/assigned_pdbs.jsonl', help="Path to a dictionary specifying which chains need to be designed and which ones are fixed, if not specied all chains will be designed.")
+    argparser.add_argument("--chain_id_val_jsonl",type=str, default='./data/Cyclic peptide/val/assigned_pdbs.jsonl', help="Path to a dictionary specifying which chains need to be designed and which ones are fixed, if not specied all chains will be designed.")
     
-    argparser.add_argument("--jsonl_path_train", type=str, default="/home/light/xw/ProteinMPNN_222/training/data/Cyclic peptide/train/parsed_pdbs.jsonl",help="path for loading training data") #json
-    argparser.add_argument("--jsonl_path_valid", type=str, default="/home/light/xw/ProteinMPNN_222/training/data/Cyclic peptide/val/parsed_pdbs.jsonl",help="path for loading valid data") #json
+    argparser.add_argument("--jsonl_path_train", type=str, default="./data/Cyclic peptide/train/parsed_pdbs.jsonl",help="path for loading training data") #json
+    argparser.add_argument("--jsonl_path_valid", type=str, default="./data/Cyclic peptide/val/parsed_pdbs.jsonl",help="path for loading valid data") #json
     
     argparser.add_argument("--path_for_outputs", type=str, default="./test_81_stru3/30_recycle3", help="path for logs and model weights=./exp_020")#
     #
-    argparser.add_argument("--previous_checkpoint", type=str, default="/home/light/xw/ProteinMPNN_222/training/test_81_stru3/model_weights/epoch30_step2430.pt", help="path for previous model weights, e.g. file.pt")#
+    argparser.add_argument("--previous_checkpoint", type=str, default="./script/model_weight/HighMPNN.pt", help="path for previous model weights, e.g. file.pt")#
 
     argparser.add_argument("--num_epochs", type=int, default=10, help="number of epochs to train for 200")#
     argparser.add_argument("--batch_size_train", type=int, default=256, help="number of tokens for one batch") #
